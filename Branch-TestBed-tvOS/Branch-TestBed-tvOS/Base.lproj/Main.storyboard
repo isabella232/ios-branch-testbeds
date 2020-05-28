@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="16097" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Branch_TestBed_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Branch TestBed tvOS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7A-YI-Gm9">
+                                <rect key="frame" x="106" y="68" width="1708" height="753"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCX-R3-TFz">
+                                <rect key="frame" x="106" y="882" width="123" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="ioD-ir-YiH"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="uri"/>
+                                <connections>
+                                    <action selector="testURI" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="cpV-tk-8Y7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woq-yH-0JR">
+                                <rect key="frame" x="289" y="882" width="212" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="app.link"/>
+                                <connections>
+                                    <action selector="testBranchLink" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Pem-L2-3D4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpf-Md-EZ5">
+                                <rect key="frame" x="561" y="882" width="174" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="event"/>
+                                <connections>
+                                    <action selector="testEvent" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="hdL-Vu-w0z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlR-fj-314">
+                                <rect key="frame" x="795" y="882" width="251" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="create link"/>
+                                <connections>
+                                    <action selector="testCreateLink" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="gLU-oM-8AW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D7A-YI-Gm9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2Bk-9a-PQl"/>
+                            <constraint firstItem="woq-yH-0JR" firstAttribute="baseline" secondItem="fpf-Md-EZ5" secondAttribute="baseline" id="8aF-Be-jdF"/>
+                            <constraint firstItem="fpf-Md-EZ5" firstAttribute="leading" secondItem="woq-yH-0JR" secondAttribute="trailing" constant="60" id="AcQ-Jx-vz9"/>
+                            <constraint firstItem="aCX-R3-TFz" firstAttribute="baseline" secondItem="woq-yH-0JR" secondAttribute="baseline" id="E9L-Ql-udD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aCX-R3-TFz" secondAttribute="bottom" constant="52" id="FTn-6T-gvk"/>
+                            <constraint firstItem="fpf-Md-EZ5" firstAttribute="baseline" secondItem="KlR-fj-314" secondAttribute="baseline" id="GBa-q8-sAA"/>
+                            <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KlR-fj-314" secondAttribute="trailing" symbolic="YES" id="GHr-a4-Fg9"/>
+                            <constraint firstItem="woq-yH-0JR" firstAttribute="leading" secondItem="aCX-R3-TFz" secondAttribute="trailing" constant="60" id="ePq-2g-131"/>
+                            <constraint firstItem="D7A-YI-Gm9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gdj-FM-c2v"/>
+                            <constraint firstItem="aCX-R3-TFz" firstAttribute="top" secondItem="D7A-YI-Gm9" secondAttribute="bottom" constant="61" id="hBb-hc-iUw"/>
+                            <constraint firstItem="D7A-YI-Gm9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iiW-Gy-VzM"/>
+                            <constraint firstItem="KlR-fj-314" firstAttribute="leading" secondItem="fpf-Md-EZ5" secondAttribute="trailing" constant="60" id="jII-q6-Tp6"/>
+                            <constraint firstItem="D7A-YI-Gm9" firstAttribute="leading" secondItem="aCX-R3-TFz" secondAttribute="leading" id="kXX-On-2Ow"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="D7A-YI-Gm9" id="cQy-AM-bu4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="65"/>
+        </scene>
+    </scenes>
+</document>

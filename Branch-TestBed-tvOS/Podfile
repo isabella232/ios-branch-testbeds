@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+platform :tvos, '9.0'
+
+target 'Branch-TestBed-tvOS' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Branch-TestBed-tvOS
+  pod 'Branch', :path => '~/github/ios-branch-deep-linking-attribution'
+  #pod 'Branch'
+
+  target 'Branch-TestBed-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Branch-TestBed-tvOSUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
