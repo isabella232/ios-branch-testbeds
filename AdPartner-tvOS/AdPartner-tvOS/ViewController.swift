@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func testURI() {
+        // added the adpartner parameter just to indicate where this came from, not strictly necessary
         guard let url = URL(string:"branchtest://adpartner") else { return }
         
         if (UIApplication.shared.canOpenURL(url)) {
@@ -39,8 +40,13 @@ class ViewController: UIViewController {
     
     @IBAction func testBranchLink() {
         // Since tvOS only supports app to app linking, we simply pass the advertising identifier as a query parameter
+        // Also added the adpartner parameter just to indicate where this came from, not strictly necessary
         let branchLink = "https://bnctestbed.app.link/cCWdYYokQ6?$source=adpartner&$idfa=" + self.checkIdfa()
-        self.openURL(urlString: branchLink, uriString: "branchtest://")
+        
+        guard let url = URL(string: branchLink) else { return }
+        guard let uriScheme = URL(string: "branchtest://") else { return }
+        
+        self.openURL(url: url, uriScheme: uriScheme)
     }
     
     func checkIdfa() -> String {
@@ -48,10 +54,7 @@ class ViewController: UIViewController {
     }
     
     // We assume the uri scheme is for the same app as the universal link url
-    func openURL(urlString:String, uriString:String) {
-        
-        guard let uriScheme = URL(string: uriString) else { return }
-        guard let url = URL(string:urlString) else { return }
+    func openURL(url:URL, uriScheme:URL) {
         
         // canOpenURL can only check URI schemes listed in the Info.plist.  It cannot check Universal Links.
         // https://developer.apple.com/documentation/uikit/uiapplication/1622952-canopenurl
