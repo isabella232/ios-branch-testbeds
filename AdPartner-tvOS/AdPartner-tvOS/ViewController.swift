@@ -16,8 +16,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // This example opens the target app using just a URI scheme.  This does NOT get Branch parameters or deferred deeplink data.
     @IBAction func testURI() {
-        // added the adpartner parameter just to indicate where this came from, not strictly necessary
         guard let url = URL(string:"branchtest://adpartner") else { return }
         
         if (UIApplication.shared.canOpenURL(url)) {
@@ -38,7 +38,9 @@ class ViewController: UIViewController {
         }
     }
     
+    // This example opens the target app using a Branch Link.  This does get Branch parameters and deferred deeplink data.
     @IBAction func testBranchLink() {
+        
         // Since tvOS only supports app to app linking, we simply pass the advertising identifier as a query parameter
         // Also added the adpartner parameter just to indicate where this came from, not strictly necessary
         let branchLink = "https://bnctestbed.app.link/cCWdYYokQ6?$source=adpartner&$idfa=" + self.checkIdfa()
