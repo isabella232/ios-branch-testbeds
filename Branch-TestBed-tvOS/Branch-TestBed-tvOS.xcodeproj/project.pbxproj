@@ -21,6 +21,7 @@
 		5F2BB875247F18C0003FCDB4 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2BB874247F18C0003FCDB4 /* Logger.m */; };
 		5F2BB879247F485C003FCDB4 /* applink.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F2BB877247F485C003FCDB4 /* applink.png */; };
 		5F2BB87A247F485C003FCDB4 /* uri.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F2BB878247F485C003FCDB4 /* uri.png */; };
+		5FC4CC1024818CE90001E701 /* NSURLSession+Branch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC4CC0E24818CE90001E701 /* NSURLSession+Branch.m */; };
 		6FA40E1F53A0585E3103D079 /* Pods_Branch_TestBed_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4E649C41BCFC02C61674C8 /* Pods_Branch_TestBed_tvOS.framework */; };
 		BD6DFCF54DDFC2CD95756BC9 /* Pods_Branch_TestBed_tvOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0002B73D09CC9D641503A694 /* Pods_Branch_TestBed_tvOSUITests.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,8 @@
 		5F2BB874247F18C0003FCDB4 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		5F2BB877247F485C003FCDB4 /* applink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applink.png; sourceTree = "<group>"; };
 		5F2BB878247F485C003FCDB4 /* uri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uri.png; sourceTree = "<group>"; };
+		5FC4CC0E24818CE90001E701 /* NSURLSession+Branch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+Branch.m"; sourceTree = "<group>"; };
+		5FC4CC0F24818CE90001E701 /* NSURLSession+Branch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+Branch.h"; sourceTree = "<group>"; };
 		8435FC64B0DCC5DA73D0A625 /* Pods-Branch-TestBed-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Branch-TestBed-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Branch-TestBed-tvOSTests/Pods-Branch-TestBed-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF2293E48EB1AF98D67970AC /* Pods-Branch-TestBed-tvOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Branch-TestBed-tvOSUITests.release.xcconfig"; path = "Target Support Files/Pods-Branch-TestBed-tvOSUITests/Pods-Branch-TestBed-tvOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7344C6AFC3C7E7179117B2A /* Pods_Branch_TestBed_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Branch_TestBed_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +180,8 @@
 				5F2BB833247F0232003FCDB4 /* ViewController.swift */,
 				5F2BB873247F18C0003FCDB4 /* Logger.h */,
 				5F2BB874247F18C0003FCDB4 /* Logger.m */,
+				5FC4CC0F24818CE90001E701 /* NSURLSession+Branch.h */,
+				5FC4CC0E24818CE90001E701 /* NSURLSession+Branch.m */,
 				5F2BB835247F0232003FCDB4 /* Main.storyboard */,
 				5F2BB838247F0234003FCDB4 /* Assets.xcassets */,
 				5F2BB83A247F0234003FCDB4 /* LaunchScreen.storyboard */,
@@ -491,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F2BB834247F0232003FCDB4 /* ViewController.swift in Sources */,
+				5FC4CC1024818CE90001E701 /* NSURLSession+Branch.m in Sources */,
 				5F2BB875247F18C0003FCDB4 /* Logger.m in Sources */,
 				5F2BB832247F0232003FCDB4 /* AppDelegate.swift in Sources */,
 			);

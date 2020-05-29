@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AdSupport
 
 class ViewController: UIViewController {
 
@@ -37,14 +38,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func testBranchLink() {
-        guard let uriScheme = URL(string:"branchtest://") else { return }
-        guard let url = URL(string:"https://bnctestbed.app.link/cCWdYYokQ6?$source=adpartner") else { return }
-        
-        self.openURL(url: url, uriScheme: uriScheme)
+        // Since tvOS only supports app to app linking, we simply pass the advertising identifier as a query parameter
+        let branchLink = "https://bnctestbed.app.link/cCWdYYokQ6?$source=adpartner&$idfa=" + self.checkIdfa()
+        self.openURL(urlString: branchLink, uriString: "branchtest://")
+    }
+    
+    func checkIdfa() -> String {
+        return ASIdentifierManager.shared().advertisingIdentifier.uuidString
     }
     
     // We assume the uri scheme is for the same app as the universal link url
-    func openURL(url:URL, uriScheme:URL) {
+    func openURL(urlString:String, uriString:String) {
+        
+        guard let uriScheme = URL(string: uriString) else { return }
+        guard let url = URL(string:urlString) else { return }
         
         // canOpenURL can only check URI schemes listed in the Info.plist.  It cannot check Universal Links.
         // https://developer.apple.com/documentation/uikit/uiapplication/1622952-canopenurl
@@ -67,9 +74,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    // This click is broken
-    // "click" link for deferred deeplink data, we may need an API to submit fake clicks
     func clickBranchLink(url:URL) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {
@@ -78,7 +82,7 @@ class ViewController: UIViewController {
         }.resume()
     }
     
-    // since tvOS does not have a webview or safari, we cannot rely on Branch's redirection to send users to the app store
+    // directly open the app store if were unable to detect the app
     func openAppStore() {
         guard let url = URL(string:"https://apps.apple.com/us/app/branch-monster-factory/id917737838?mt=8") else { return }
         

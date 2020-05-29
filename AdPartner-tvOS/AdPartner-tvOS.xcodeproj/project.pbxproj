@@ -14,6 +14,7 @@
 		5FC4CBE1248062F80001E701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC4CBDF248062F80001E701 /* LaunchScreen.storyboard */; };
 		5FC4CBEC248062F80001E701 /* AdPartner_tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC4CBEB248062F80001E701 /* AdPartner_tvOSTests.swift */; };
 		5FC4CBF7248062F80001E701 /* AdPartner_tvOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC4CBF6248062F80001E701 /* AdPartner_tvOSUITests.swift */; };
+		5FC4CC1324818D680001E701 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC4CC1224818D680001E701 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5FC4CBF2248062F80001E701 /* AdPartner-tvOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AdPartner-tvOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC4CBF6248062F80001E701 /* AdPartner_tvOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdPartner_tvOSUITests.swift; sourceTree = "<group>"; };
 		5FC4CBF8248062F80001E701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FC4CC1224818D680001E701 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FC4CC1324818D680001E701 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				5FC4CBEA248062F80001E701 /* AdPartner-tvOSTests */,
 				5FC4CBF5248062F80001E701 /* AdPartner-tvOSUITests */,
 				5FC4CBD4248062F50001E701 /* Products */,
+				5FC4CC1124818D680001E701 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				5FC4CBF8248062F80001E701 /* Info.plist */,
 			);
 			path = "AdPartner-tvOSUITests";
+			sourceTree = "<group>";
+		};
+		5FC4CC1124818D680001E701 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FC4CC1224818D680001E701 /* AdSupport.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

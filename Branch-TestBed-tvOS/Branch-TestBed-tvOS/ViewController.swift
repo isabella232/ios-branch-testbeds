@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         Logger.shared().registerLogBlock { [weak self] (message) in
             DispatchQueue.main.async {
                 if let label = self?.textLabel {
-                    label.text = message
+                    label.text = "Branch TestBed\n" + message
                 }
             }
         }
