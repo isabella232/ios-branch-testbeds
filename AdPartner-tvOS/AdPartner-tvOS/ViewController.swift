@@ -82,7 +82,7 @@ class ViewController: UIViewController {
         }.resume()
     }
     
-    // directly open the app store if were unable to detect the app
+    // directly open the app store if we're unable to detect the app
     func openAppStore() {
         guard let url = URL(string:"https://apps.apple.com/us/app/branch-monster-factory/id917737838?mt=8") else { return }
         
