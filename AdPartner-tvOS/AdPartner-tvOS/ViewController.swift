@@ -64,13 +64,13 @@ class ViewController: UIViewController {
             if #available(tvOS 10.0, *) {
                 UIApplication.shared.open(url, options: [:]) { (success) in
                     if (success == false) {
-                        self.openAppStore()
+                        self.clickBranchLink(url: url)
                     }
                 }
             } else {
                 let success = UIApplication.shared.openURL(url)
                 if (success == false) {
-                    self.openAppStore()
+                    self.clickBranchLink(url: url)
                 }
             }
             

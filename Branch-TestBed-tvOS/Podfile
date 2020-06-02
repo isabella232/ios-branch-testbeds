@@ -6,8 +6,8 @@ target 'Branch-TestBed-tvOS' do
   use_frameworks!
 
   # Pods for Branch-TestBed-tvOS
-  pod 'Branch', :path => '~/github/ios-branch-deep-linking-attribution'
-  #pod 'Branch'
+  #pod 'Branch', :path => '~/github/ios-branch-deep-linking-attribution'
+  pod 'Branch'
 
   target 'Branch-TestBed-tvOSTests' do
     inherit! :search_paths
